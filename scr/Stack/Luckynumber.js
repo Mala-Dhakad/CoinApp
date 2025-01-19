@@ -1,0 +1,89 @@
+import { View, Text, ScrollView,Image, ImageBackground, StyleSheet } from 'react-native'
+import React from 'react'
+import Lucky from '../component/Lucky'
+import LinearTwo from '../component/LinearTwo'
+
+const Luckynumber = () => {
+  return (
+    <View style={{flex:1,}}>
+      <ScrollView>
+        <ImageBackground source={require("../assets/image.png")} style={styles.back}/>
+<View style={styles.header}>
+                <Image source={require("../assets/back.png")} />
+                <Text style={styles.text}>Lucky Draw</Text>
+                <Image source={require("../assets/info.png")} style={styles.circle} />
+            </View>
+
+
+        <View style={styles.whitecolor}>
+  <Lucky imagesource={require("../assets/luckynumber.png")}
+  title={"Win 100 Coins"}
+  titleone={"#111222"}
+  titletwo={"17/04"}
+  titlethree={"14%"}
+  win={"Winners"}
+  LinearTwo={<LinearTwo title={"Free Entry"}/>}
+
+  />
+
+<Lucky imagesource={require("../assets/luckynumber.png")}
+  title={"Win 500 Coins"}
+  titleone={"#111227"}
+  titletwo={"65/130"}
+  titlethree={"50%"}
+  win={"Winners"}
+  LinearTwo={<LinearTwo title={"Free Entry"}/>}
+  />
+
+<Lucky imagesource={require("../assets/luckynumber.png")}
+  title={"Win 1000 Coins"}
+  titleone={"#541227"}
+  titletwo={"272/272"}
+  titlethree={"100%"}
+  win={"Winners"}
+  LinearTwo={<LinearTwo title={"Free Entry"}/>}
+  />
+
+<Lucky imagesource={require("../assets/luckynumber.png")}
+  title={"Win 2500 Coins"}
+  titleone={"#971227"}
+  titletwo={"24/200"}
+  titlethree={"12%"}
+  win={"Winners"}
+  LinearTwo={<LinearTwo title={"Free Entry"}/>}
+  />
+  </View>
+  </ScrollView>
+    </View>
+  )
+}
+
+export default Luckynumber;
+const styles=StyleSheet.create({
+  whitecolor: {
+    flex: 1,
+    backgroundColor: 'white',
+    marginTop: 30,
+    borderTopLeftRadius: 19,
+    borderTopRightRadius: 19,
+},
+back:{
+  flex:1,
+  height:'100%',
+  width:'100%',
+  position:'absolute'
+},
+header: {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  textAlign: 'center',
+  marginTop: 30,
+  padding: 15,
+},
+text: {
+  fontSize: 19,
+  fontWeight: "800",
+  color: "white",
+},
+
+})
